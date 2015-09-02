@@ -1,0 +1,26 @@
+(cons 1 [2 3 4])
+(cons 1 '(2 3 4))
+(conj 1 '(2 3 4))
+(conj '(2 3 4) 1)
+(conj [2 3 4] 1)
+(conj 0 [2 3 4])
+(conj [2 3 4] 0)
+(cons 0 [2 3 4])
+(into [] (cons 0 [2 3 4]))
+(conj [] [1 2 3])
+(+ [ 2 4 ] [ 0 10 20] )
+(map + [1 2] [3 4])
+(map + [1 2] [3 4 5])
+(map + [1 2 3] [3 4])
+(max 2 3)
+(defn add-em-up
+  [vectors]
+  (reduce (fn [a b] map + a b) vectors)
+)
+(add-em-up [[1 2 3] [4 5 6]])
+(defn add-em-up
+  [vectors]
+  (reduce (fn [a b] (map + a b)) vectors))
+(add-em-up [[1 2 3] [4 5 6]])
+(add-em-up [[1 2 3] [4 5 6] [7 8 9 10 11 12])
+(add-em-up [[1 2 3] [4 5 6] [7 8 9 10 11 12]])
